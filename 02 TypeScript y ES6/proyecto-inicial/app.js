@@ -23,3 +23,12 @@ var spiderman = {
     age: 28
 };
 console.log(today);
+//Template literales del ES6
+var alex = "Alex";
+var lastName = "Londoño";
+var age = 28;
+var text = "Hello, How are you " + alex + " " + lastName + ", I am " + age;
+var text2 = "" + 8 / 2;
+console.log(text);
+console.log(text2);
+console.log(spiderman.name);

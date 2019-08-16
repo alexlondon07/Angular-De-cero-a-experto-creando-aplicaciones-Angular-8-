@@ -30,3 +30,15 @@ let spiderman = {
 }
 
 console.log( today );
+
+//Template literales del ES6
+
+let alex:string = "Alex";
+let lastName:string ="Londoño";
+let age:number = 28;
+
+let text = `Hello, How are you ${alex} ${lastName}, I am ${ age }` ;
+let text2 = `${ 8/2}`;
+console.log( text );
+console.log( text2 );
+console.log( spiderman.name );
