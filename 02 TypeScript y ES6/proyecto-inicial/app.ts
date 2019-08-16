@@ -42,3 +42,22 @@ let text2 = `${ 8/2}`;
 console.log( text );
 console.log( text2 );
 console.log( spiderman.name );
+
+//Funciones: Parámetros opcionales, obligatorios y por defecto
+
+function activate (
+    who:string, 
+    obj:string="Batiseñal", 
+    moment?:String
+    ){
+
+    let msj:string;
+
+    if(moment){
+        msj =  `${who} activó the ${obj}` ;
+    }
+   
+    console.log(msj);
+}
+
+activate("Gordon");

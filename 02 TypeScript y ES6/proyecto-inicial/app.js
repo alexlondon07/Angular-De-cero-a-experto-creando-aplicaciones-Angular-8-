@@ -32,3 +32,13 @@ var text2 = "" + 8 / 2;
 console.log(text);
 console.log(text2);
 console.log(spiderman.name);
+//Funciones: Parámetros opcionales, obligatorios y por defecto
+function activate(who, obj, moment) {
+    if (obj === void 0) { obj = "Batiseñal"; }
+    var msj;
+    if (moment) {
+        msj = who + " activ\u00F3 the " + obj;
+    }
+    console.log(msj);
+}
+activate("Gordon");
