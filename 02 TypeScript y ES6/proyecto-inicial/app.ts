@@ -1,0 +1,1 @@
+// Un archivo simple de TypeScript
