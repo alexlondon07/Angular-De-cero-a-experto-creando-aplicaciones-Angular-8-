@@ -65,6 +65,7 @@ class Rectangulo{
         this.base = base;
         this.altura = altura;
     }
+    
     calcularArea():number {
         return this.base*this.altura;
     }
