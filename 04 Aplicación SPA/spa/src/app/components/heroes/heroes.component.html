@@ -4,7 +4,7 @@
     <div class="card animated fadeIn fast" *ngFor="let item of heroes let i = index">
         <img [src]="item.img" class="card-img-top" [alt]="item.nombre">
             <div class="card-body">
-            <h5 class="card-title">{{ item.nombre }}</h5>
+            <h5 class="card-title">{{ item.name }}</h5>
             <p class="card-text">{{ item.bio }}</p>
             <p class="card-text"><small class="text-muted">{{ item.aparicion }}</small></p>
             <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">

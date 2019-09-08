@@ -62,8 +62,20 @@ export class HeroeService {
         return this.heroes;
     }
 
-    getHeroe(id:number){
-        return this.heroes[id];
+    getHeroe(index:number){
+        return this.heroes[index];
+    }
+
+    searchHeroeService( text:string ){
+        let heroesArr:Heroe[] = [];
+        text = text.toLocaleLowerCase();
+        for( let heroe of this.heroes ){
+            let name = heroe.name.toLocaleLowerCase();
+            if( name.indexOf(text) >= 0 ){
+                heroesArr.push( heroe );
+            }
+        }
+        return heroesArr;
     }
 }
 

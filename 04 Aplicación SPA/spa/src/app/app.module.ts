@@ -14,6 +14,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { APP_ROUTING } from './app.routes';
 import { HeroeService } from './services/heroes.service';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { SearchComponent } from './components/search/search.component';
 
 //Services
 
@@ -24,7 +25,8 @@ import { HeroeComponent } from './components/heroe/heroe.component';
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    HeroeComponent
+    HeroeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
