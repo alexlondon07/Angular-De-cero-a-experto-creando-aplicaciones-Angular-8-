@@ -1,16 +1,16 @@
 <h1>Heroes <small>Marvel y  DC</small></h1>
 <hr> 
 <div class="card-columns">
-    <div class="card" *ngFor="let item of heroes let i = index">
+    <div class="card animated fadeIn fast" *ngFor="let item of heroes let i = index">
         <img [src]="item.img" class="card-img-top" [alt]="item.nombre">
-        <div class="card-body">
-          <h5 class="card-title">{{ item.nombre }}</h5>
-          <p class="card-text">{{ item.bio }}</p>
-          <p class="card-text"><small class="text-muted">{{ item.aparicion }}</small></p>
-          <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">
-              Ver más...
-          </button>
-          <!-- <a [routerLink]="['/heroe', i ]" routerLinkActive="router-link-active"  class="btn btn-outline-primary btn-block">Ver más...</a> -->
-        </div>
+            <div class="card-body">
+            <h5 class="card-title">{{ item.nombre }}</h5>
+            <p class="card-text">{{ item.bio }}</p>
+            <p class="card-text"><small class="text-muted">{{ item.aparicion }}</small></p>
+            <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">
+                Ver más...
+            </button>
+            <!-- <a [routerLink]="['/heroe', i ]" routerLinkActive="router-link-active"  class="btn btn-outline-primary btn-block">Ver más...</a> -->
+            </div>
     </div>
 </div>
