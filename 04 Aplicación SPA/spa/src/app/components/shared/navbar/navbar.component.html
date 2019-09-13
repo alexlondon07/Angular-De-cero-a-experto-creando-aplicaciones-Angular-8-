@@ -24,6 +24,10 @@
         <a class="nav-link" [routerLink]="['about']">About</a>
       </li>
 
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['pipes']">Pipes</a>
+      </li>
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search heroe" (keyup.enter)="searchHeroe(searchText.value)" #searchText aria-label="Search">

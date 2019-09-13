@@ -16,6 +16,7 @@ import { HeroeService } from './services/heroes.service';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { SearchComponent } from './components/search/search.component';
 import { HeroeCardComponent } from './components/heroe-card/heroe-card.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 //Services
 
@@ -28,7 +29,8 @@ import { HeroeCardComponent } from './components/heroe-card/heroe-card.component
     HeroesComponent,
     HeroeComponent,
     SearchComponent,
-    HeroeCardComponent
+    HeroeCardComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
