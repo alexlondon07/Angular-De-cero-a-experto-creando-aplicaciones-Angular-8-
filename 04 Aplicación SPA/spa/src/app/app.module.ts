@@ -28,6 +28,9 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 import { DomSecuroPipe } from './pipes/domseguro.pipe';
 import { PasswordPipePipe } from './pipes/PasswordPipe.pipe';
+import { CallbackComponent } from './components/callback/callback.component';
+import { PricesComponent } from './components/prices/prices.component';
+import { ProtectedComponent } from './components/protected/protected.component';
 
 //Services
 
@@ -44,7 +47,10 @@ import { PasswordPipePipe } from './pipes/PasswordPipe.pipe';
     PipesComponent,
     CapitalizadoPipe,
     DomSecuroPipe,
-    PasswordPipePipe
+    PasswordPipePipe,
+    CallbackComponent,
+    PricesComponent,
+    ProtectedComponent
   ],
   imports: [
     BrowserModule,
