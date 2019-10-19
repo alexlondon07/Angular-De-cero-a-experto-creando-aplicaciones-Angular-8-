@@ -10,6 +10,7 @@ import { PricesComponent } from './components/prices/prices.component';
 import { ProtectedComponent } from './components/protected/protected.component';
 import { CallbackComponent } from './components/callback/callback.component';
 import { AuthGuard } from './services/auth.guard';
+import { FormComponent } from './components/form/form.component';
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
@@ -17,6 +18,7 @@ const APP_ROUTES: Routes = [
     { path: 'heroes', component: HeroesComponent },
     { path: 'pipes', component: PipesComponent },
     { path: 'prices', component: PricesComponent },
+    { path: 'form', component: FormComponent },
     { path: 'protected', component: ProtectedComponent, canActivate: [ AuthGuard] },
     { path: 'callback', component: CallbackComponent },
     { path: 'heroe/:id', component: HeroeComponent },

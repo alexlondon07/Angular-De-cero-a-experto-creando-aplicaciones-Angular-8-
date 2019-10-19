@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 
@@ -31,6 +31,7 @@ import { PasswordPipePipe } from './pipes/PasswordPipe.pipe';
 import { CallbackComponent } from './components/callback/callback.component';
 import { PricesComponent } from './components/prices/prices.component';
 import { ProtectedComponent } from './components/protected/protected.component';
+import { FormComponent } from './components/form/form.component';
 
 //Services
 
@@ -50,15 +51,17 @@ import { ProtectedComponent } from './components/protected/protected.component';
     PasswordPipePipe,
     CallbackComponent,
     PricesComponent,
-    ProtectedComponent
+    ProtectedComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     APP_ROUTING,
   ],
-  providers: [ 
+  providers: [
     HeroeService,
     { provide: LOCALE_ID, useValue: "es" }
   ],

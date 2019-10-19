@@ -1,0 +1,148 @@
+<!-- <h4>Formularios <small>template</small></h4>
+<hr>
+<form (ngSubmit)="save(form)" #form="ngForm" novalidate="">
+  <div>
+    <div class="form-group row has-danger">
+      <label class="col-2 col-form-label">Name</label>
+      <div class="col-8">
+        <input #name="ngModel" [(ngModel)]="user.name" name="name" minlength="5" required class="form-control"
+          type="text" placeholder="Name">
+
+        <div *ngIf="name.errors?.required" class="form-control-feedback">
+          Name is required.
+        </div>
+
+        <div *ngIf="name.errors?.minlength" class="form-control-feedback">
+          At least {{ name.errors.minlength.requiredLength }} characters
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">LastName</label>
+      <div class="col-8">
+
+        <input #lastname="ngModel" [(ngModel)]="user.lastname" name="lastname" required class="form-control" type="text"
+          placeholder="LastName">
+
+        <div *ngIf="lastname.errors?.required">
+          Lastname is required.
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Email</label>
+    <div class="col-md-8">
+      <input #email="ngModel" [(ngModel)]="user.email" name="email" required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" type="email" placeholder="Email">
+
+      <div *ngIf="email.errors?.required" class="form-control-feedback">
+        Email is required.
+      </div>
+
+      <div *ngIf="email.errors?.pattern">
+        Pattern invalid
+      </div>
+
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Country</label>
+    <div class="col-md-8">
+      <select [(ngModel)]="user.country" name="country" class="form-control">
+        <option value="">Choose option</option>
+        <option *ngFor="let item of countries" [value]="item.code"> {{ item.name }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary">
+        Save
+      </button>
+    </div>
+
+  </div>
+</form> -->
+
+
+<h4>Form <small>formGroup</small></h4>
+<hr>
+
+<form [formGroup]="formatForm" (ngSubmit)="saveForm()" novalidate>
+  <div>
+    <div class="form-group row" [ngClass]="{'has-danger': !formatForm.get('name').valid }">
+      <label class="col-2 col-form-label">Name</label>
+      <div class="col-8">
+        <input formControlName="name" class="form-control" type="text" placeholder="Name">
+
+        <div *ngIf="formatForm.controls['name'].errors?.required" class="form-control-feedback">
+          Name is required.
+        </div>
+
+        <div *ngIf="formatForm.controls['name'].errors?.minlength" class="form-control-feedback">
+          At least 5 characters
+        </div>
+
+      </div>
+    </div>
+
+    <div class="form-group row" [ngClass]="{'has-danger': !formatForm.get('lastname').valid }">
+      <label class="col-2 col-form-label">Lastname</label>
+      <div class="col-8">
+
+        <input formControlName="lastname" class="form-control" type="text" placeholder="Lastname">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row" [ngClass]="{'has-danger': !formatForm.get('email').valid }">
+    <label class="col-2 col-form-label">Email</label>
+    <div class="col-md-8">
+      <input formControlName="email" class="form-control" type="email" placeholder="Email">
+
+      <div *ngIf="formatForm.controls['email'].errors?.required" class="form-control-feedback">
+        Email is required.
+      </div>
+
+      <div *ngIf="formatForm.controls['email'].errors?.pattern" class="form-control-feedback">
+        Pattern invalid
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row" [ngClass]="{'has-danger': !formatForm.get('username').valid }">
+      <label class="col-2 col-form-label">Username</label>
+      <div class="col-8">
+        <input formControlName="username" class="form-control" type="text" placeholder="username">
+
+        <div *ngIf="formatForm.controls['username'].errors?.required" class="form-control-feedback">
+            Username is required.
+          </div>
+      </div>
+    </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary">
+        Guardar
+      </button>
+    </div>
+  </div>
+
+  {{ formatForm.valid | json }}
+  <hr>
+  {{ formatForm.value | json }}
+  <br>
+  {{ formatForm.status }}
+  <br>
+</form>
